@@ -39,7 +39,15 @@ if __name__ == "__main__":
     #                               (r"[(\neg p) \lor (\neg q)]", lambda p, q: not p or not q ) ]))
     # print(truth_table(['p', 'q'], [(r'\neg(p \implies q)', lambda p, q: not((p and q) or (not p))),
     #                                (r'\(\cancel{\iff}\)', lambda p, q: (not((p and q) or (not p))) and ((q and p) or (not q))),
-    #                                (r'q \implies p', lambda p, q: (q and p) or (not q))
+    #                                (r'q \implies p', lambda p, q: (q and p) or (not q))(p and ((p and q) or (not p))) and q
     # ]
     # ))
     # print(truth_table(['p', 'q'], [(r'p \implies \neg q', lambda p, q: (p and not q) or (not p))]))
+    # print(truth_table(['p','q'], [(r'p \land (p \implies q)', lambda p, q: p and ((p and q) or (not p))),
+    #                                (r'\implies', lambda p, q: ((p and ((p and q) or (not p))) and q) or not(p and ((p and q) or (not p))) ),
+    #                                (r'q', lambda p, q: q)
+    #                              
+    # ]))
+    print(truth_table(['p','q'], [(r'p \implies (q \land \neg q)', lambda p, q: p and (q and not q) or not p),
+                                   (r'\iff', lambda p, q: ((p and (q and not q) or not p) and (not p)) or (not((p and (q and not q) or not p)) and not(not p))),
+                                   (r'\neg p', lambda p, q: not p)]))
