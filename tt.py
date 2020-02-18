@@ -1,4 +1,9 @@
-def generate_cases(size):
+def generate_cases(size:int):
+    '''
+    input: int number of variables (p, q, r, etc.)
+    output: bool all permutations of true/false for 
+            the given variables
+    '''
     if size > 1:
         for var in generate_cases(size-1):
             yield var + [True]
@@ -9,6 +14,19 @@ def generate_cases(size):
         yield [False]
 
 def truth_table(vars, funcs):
+    '''
+    input: 
+        vars: list of variables ['p', 'q', 'r']
+        funcs: list of tuples [('label', function)] 
+           representing logical propositions, where
+           the label is formatted as logic (p -> ~q)
+           and the function is a python lambda function
+           implementing equivalent logic
+    output: string formatted as a LaTeX
+           tabular object representing a
+           truth table with values for each
+           variable, for each proposition
+    '''
     output = ""
 
     len_vars = str(len(vars))
@@ -48,6 +66,6 @@ if __name__ == "__main__":
     #                                (r'q', lambda p, q: q)
     #                              
     # ]))
-    print(truth_table(['p','q'], [(r'p \implies (q \land \neg q)', lambda p, q: p and (q and not q) or not p),
-                                   (r'\iff', lambda p, q: ((p and (q and not q) or not p) and (not p)) or (not((p and (q and not q) or not p)) and not(not p))),
-                                   (r'\neg p', lambda p, q: not p)]))
+    # print(truth_table(['p','q'], [(r'p \implies (q \land \neg q)', lambda p, q: p and (q and not q) or not p),
+    #                               (r'\iff', lambda p, q: ((p and (q and not q) or not p) and (not p)) or (not((p and (q and not q) or not p)) and not(not p))),
+    #                               (r'\neg p', lambda p, q: not p)]))
