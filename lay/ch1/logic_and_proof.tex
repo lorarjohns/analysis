@@ -1,0 +1,143 @@
+\documentclass[12pt]{scrartcl} % Font size
+
+\input{structure.tex} 
+
+\title{	
+	\normalfont\normalsize
+	\textsc{Analysis with an Introduction to Proof}\\ % Your university, school and/or department name(s)
+	\vspace{25pt} % Whitespace
+	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
+	\vspace{20pt} % Whitespace
+	{\huge Logic and Proof, Chapter Exercises}\\ % The assignment title
+	\vspace{12pt} % Whitespace
+	\rule{\linewidth}{2pt}\\ % Thick bottom horizontal rule
+	\vspace{12pt} % Whitespace
+}
+
+\author{\LARGE L. J.} % Your name
+
+\date{\normalsize\today} % Today's date (\today) or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section{Section 1}
+
+\subsection{Mark each statement true or false. Justify your answer.}
+
+\begin{enumerate}[(a)]
+	\item \emph{False.} A sentence need not be true in order to be classified a ``statement''. We require only that it ``can be clearly labeled'' true \emph{or} false. \\ We should specify the conditions that constitute clarity, and who's doing the labeling. We can condition truth and falsity on any number of assumptions---at best, explicit; at worst, implied---and the sentence's author ordinarily assumes a reader with a mental model that mirrors their own, for better or worse.
+	\item \emph{False.} In binary logic, a statement cannot be true and false at the same time. Its truth value may be as-yet unknown---it might be a conjecture---but it has to follow the rules of mathematical proof. That is, to be a statement, the rules must be able to label a sentence exclusively ``true'' or ``false'' under \emph{some} set of specified conditions. Those conditions may change: $ x + 6 = 0 $ is a statement, for certain values of $x$, but not for all.
+	\item \emph{True.} The negation of a statement need only have the opposite truth value to the statement itslf. So if $p$ is true, $\neg p$ is false, and $\neg(\neg p)$ is true.
+	\item \emph{False.} The negation of a statement is by definition the logical complement of the given proposition. Thus, we can see that either $p$ can be false or $\neg p$ can be false, but they cannot both be false at the same time.
+	\item \emph{True.} In logic, ``or'' is inclusive by default, and we must specify that we mean ``exclusive or'' ($\oplus$) (or its negation, the biconditional ($\iff$)) to denote $(p \lor q) \land \neg(p \land q)$.
+\end{enumerate}	
+
+\subsection{Mark each statement True or False. Justify each answer.}
+\begin{enumerate}[(a)]
+	\item \emph{False.} We refer to $p$ as the antecedent (that which comes (\emph{``ced-''}) before (\emph{``ante-''}). In contrast, $q$ is the consequent, or logical ``result''. In other words, $p$ is called the sufficient condition, and $q$ is called the necessary condition.
+	\item \emph{True.} The implication applies only to worlds in which $p$ is true. Since we have only binary truth, we cannot rule out ``truth'' in worlds not containing $p$. Hence, these cases are true, and the only false one in that in which $p$ exists, but the necessary condition $q$ does not.\\
+	\begin{center} 
+	\begin{tabular}{*{2}{c}|*{1}{c}}$p$&$q$&$p \implies q$\\
+		\hline
+		T&T&T\\
+		T&F&F\\
+		F&T&T\\
+		F&F&T\\
+	\end{tabular}
+	\end{center}
+	\item \emph{False.} This formulation customarily evaluates to the same thing as ``$q$ whenever $p$'', because $p$ is a sufficient condition to ``trigger'' the requirement of $q$. In other words, whenever we have $p$, we must also have its necessary condition, $q$. But as the truth table in $(b)$ illustrates, the statement is true when $q$ is true but $p$ is false, and so the reverse dependency does not hold. Thus, it's incorrect to say that ``if $p$, then $q$'' is equivalent to ``$p$ whenever $q$''.
+	\item \emph{True.} The negation of a conjunction is logically equivalent to the disjunction of the negations of its individual components.
+	\begin{center}
+	\begin{tabular}{*{2}{c}|*{3}{c}}$p$&$q$&$\neg(p \land q)$&$\iff$&$[(\neg p) \lor (\neg q)]$\\
+	\hline
+	T&T&F&T&F\\
+	T&F&T&T&T\\
+	F&T&T&T&T\\
+	F&F&T&T&T\\
+	\end{tabular}
+	\end{center}
+	
+	\item \emph{False.} The negation of $p \implies q$ is not $q \implies p$.
+	\begin{center}
+	\begin{tabular}{*{2}{c}|*{3}{c}}$p$&$q$&$\neg(p \implies q)$&$
+	\cancel{\iff} $&$q \implies p$\\
+\hline
+T&T&F&F&T\\
+T&F&T&T&T\\
+F&T&F&F&F\\
+F&F&F&F&T\\
+\end{tabular}\end{center}
+\end{enumerate}
+\subsection{Write the negation of each statement.}
+\begin{enumerate}[(a)]
+	\item The $3x3$ identity matrix is not singular.
+	\item The function $f(x)=sin(x)$ is unbounded on $\mathbb{R}$.
+	\item The functions $f$ and $g$ are nonlinear.
+	\item Six is not prime and seven is even.
+	\item $x$ is in $D$, and $f(x) \geq 5$.
+	\item $(a_n)$ is monotone and bounded, and $(a_n)$ is divergent.
+	\item $f$ is injective, but $S$ is not finite and $S$ is not denumerable.
+\end{enumerate}
+\subsection{Write the negation of each statement.}
+\begin{enumerate}[(a)]
+	\item $f(x)$ is discontinuous at $x=3$.
+	\item $R$ is not reflexive and not symmetric.
+	\item $4$ and $9$ are not relatively prime.
+	\item $x \notin A \lor x \in B$.
+	\item $x < 7$ and $f(x)$ is in C.
+	\item $(a_n)$ is convergent and $(a_n)$ is unbounded or not monotone.
+	\item $f$ is continuous and $A$ is open, but $f^{-1}(A)$ is closed.
+\end{enumerate}
+\subsection{Identify the antecedent and the consequent in each statement.}
+\begin{enumerate}[(a)]
+	
+	\item
+	\begin{itemize}
+		\item \emph{Antecedent:} $M$ is singular.
+		\item \emph{Consequent:} $M$ has a zero eigenvalue.
+	\end{itemize}
+	
+	\item
+	\begin{itemize}
+		\item \emph{Antecedent:} Linearity.
+		\item \emph{Consequent:} Continuity.
+	\end{itemize}
+	
+	\item
+	\begin{itemize}
+		\item \emph{Antecedent:} A sequence is Cauchy.
+		\item \emph{Consequent:} It is bounded.
+	\end{itemize}
+	
+	\item
+	\begin{itemize}
+		\item \emph{Antecedent:} $y > 5$.
+		\item \emph{Consequent:} $x <3$.
+	\end{itemize}
+	\end{enumerate}
+
+\subsection{Construct a truth table for each statement.}
+\begin{enumerate}[(a)]
+	\item 
+		%\begin{center}
+		\begin{tabular}{*{2}{c}|*{1}{c}}$p$&$q$&$p \implies \neg q$\\
+		\hline
+		T&T&F\\
+		T&F&T\\
+		F&T&T\\
+		F&F&T\\
+		\end{tabular}
+		%\end{center}
+	\item
+		
+\end{enumerate}
+
+\subsection{Identify the antecedent and the consequent in each statement.}
+
+\section{Section 2}
+
+\subsection{*}
+
+\end{document}
