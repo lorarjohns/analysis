@@ -69,3 +69,10 @@ if __name__ == "__main__":
     # print(truth_table(['p','q'], [(r'p \implies (q \land \neg q)', lambda p, q: p and (q and not q) or not p),
     #                               (r'\iff', lambda p, q: ((p and (q and not q) or not p) and (not p)) or (not((p and (q and not q) or not p)) and not(not p))),
     #                               (r'\neg p', lambda p, q: not p)]))
+
+    # print(truth_table(['p', 'q'], [(r'p \lor \neg q', lambda p, q: p or not q)]))
+    # print(truth_table(['p'], [(r'p \land \neg p', lambda p: p and not p)]))
+
+    print(truth_table(['p','q'], [(r'[(\neg q) \land (p \implies q)]', lambda p, q: (not q) and ((p and q) or not p)),
+                                   (r'\implies', lambda p, q: (not q) and ((p and q) or not p) and not p or not((not q) and ((p and q) or not p))),
+                                   (r'\neg p', lambda p, q: not p)]))
