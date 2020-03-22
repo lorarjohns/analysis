@@ -97,4 +97,16 @@ if __name__ == "__main__":
 
     # print(truth_table(['p','q'], [(r'p \land q', lambda p,q: p and q)]))
 
-    print(truth_table(['p','q'], [(r'p \nabla q', lambda p,q: delta(p,q))]))
+    # print(truth_table(['p','q'], [(r'p \nabla q', lambda p,q: delta(p,q))]))
+
+    # print(truth_table(['p','q'], [(r'(p \land q)', lambda p,q: p and q),
+    #                               (r'\iff', lambda p,q: (p and q) or (q and p)),
+    #                               (r'(q \land p', lambda p,q: q and p)]))
+
+    # print(truth_table(['p','q'], [(r'(p \lor q)', lambda p,q: p or q),
+    #                               (r'\iff', lambda p,q: True),
+    #                               (r'(q \lor p', lambda p,q: q or p)]))
+
+    print(truth_table(['p','q','r'], [(r'[p \lor (q \land r)]', lambda p,q,r: p or (q and r)),
+                                     (r'\iff', lambda p,q,r: True),
+                                     (r'[(p \lor q) \land (p \lor r)', lambda p,q,r: (p or q) and (p or r))]))

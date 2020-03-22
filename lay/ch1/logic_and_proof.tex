@@ -285,7 +285,77 @@ F&F&T\\
 		  \end{tabular}
 \end{enumerate}
 
-\subsection{•}
+\subsection{Use truth tables to verify that each of the following is a tautology.}
+
+\emph{Commutative laws}
+
+\begin{enumerate}[(a)]
+	\item \begin{tabular}{*{2}{c}|*{3}{c}}$p$&$q$&$(p \land q)$&$\iff$&$(q \land p$\\
+\hline
+T&T&T&T&T\\
+T&F&F&T&F\\
+F&T&F&T&F\\
+F&F&F&T&F\\	
+\end{tabular}
+
+	\item \begin{tabular}{*{2}{c}|*{3}{c}}$p$&$q$&$(p \lor q)$&$\iff$&$(q \lor p$\\
+\hline
+T&T&T&T&T\\
+T&F&T&T&T\\
+F&T&T&T&T\\
+F&F&F&T&F\\
+\end{tabular}
+
+\emph{Associative laws}
+	\item \begin{tabular}{*{3}{c}|*{3}{c}}$p$&$q$&$r$&$[p \land (q \land r)]$&$\iff$&$[(p \land q) \land r$\\
+\hline
+T&T&T&T&T&T\\
+T&T&F&F&T&F\\
+T&F&T&F&T&F\\
+T&F&F&F&T&F\\
+F&T&T&F&T&F\\
+F&T&F&F&T&F\\
+F&F&T&F&T&F\\
+F&F&F&F&T&F\\
+\end{tabular}
+
+	\item \begin{tabular}{*{3}{c}|*{3}{c}}$p$&$q$&$r$&$[p \lor (q \lor r)]$&$\iff$&$[(p \lor q) \lor r$\\
+\hline
+T&T&T&T&T&T\\
+T&T&F&T&T&T\\
+T&F&T&T&T&T\\
+T&F&F&T&T&T\\
+F&T&T&T&T&T\\
+F&T&F&T&T&T\\
+F&F&T&T&T&T\\
+F&F&F&F&T&F\\
+\end{tabular}
+
+\emph{Distributive laws}
+\item \begin{tabular}{*{3}{c}|*{3}{c}}$p$&$q$&$r$&$[p \land (q \lor r)]$&$\iff$&$[(p \land q) \lor (p \land r)$\\
+\hline
+T&T&T&T&T&T\\
+T&T&F&T&T&T\\
+T&F&T&T&T&T\\
+T&F&F&F&T&F\\
+F&T&T&F&T&F\\
+F&T&F&F&T&F\\
+F&F&T&F&T&F\\
+F&F&F&F&T&F\\
+\end{tabular}
+
+\item \begin{tabular}{*{3}{c}|*{3}{c}}$p$&$q$&$r$&$[p \lor (q \land r)]$&$\iff$&$[(p \lor q) \land (p \lor r)$\\
+\hline
+T&T&T&T&T&T\\
+T&T&F&T&T&T\\
+T&F&T&T&T&T\\
+T&F&F&T&T&T\\
+F&T&T&T&T&T\\
+F&T&F&F&T&F\\
+F&F&T&F&T&F\\
+F&F&F&F&T&F\\
+\end{tabular}
+\end{enumerate}
 \section{Section 2}
 
 \subsection{*}
