@@ -3,3 +3,5 @@
 *.log
 *.synctex.gz
 book/
+lay/Lay-Analysis homework.doc
+lay/*.lock*

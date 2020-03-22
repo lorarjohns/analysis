@@ -95,4 +95,6 @@ if __name__ == "__main__":
     #                               (r'\iff', lambda p,q: delta(p,p) and delta(q,q) or not delta(p,p) and not delta(q,q)),
     #                               (r'q \nabla q', lambda p,q: delta(q,q))]))
 
-    print(truth_table(['p','q'], [(r'p \land q', lambda p,q: p and q)]))
+    # print(truth_table(['p','q'], [(r'p \land q', lambda p,q: p and q)]))
+
+    print(truth_table(['p','q'], [(r'p \nabla q', lambda p,q: delta(p,q))]))
