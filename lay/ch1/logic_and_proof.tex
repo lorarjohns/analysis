@@ -73,7 +73,7 @@ F&F&F&F&T\\
 \subsection{Write the negation of each statement.}
 \begin{enumerate}[(a)]
 	\item The $3x3$ identity matrix is not singular.
-	\item The function $f(x)=sin(x)$ is unbounded on $\mathbb{R}$.
+	\item The function $f(x)=sin(x)$ is not bounded on $\mathbb{R}$.
 	\item The functions $f$ and $g$ are nonlinear.
 	\item Six is not prime and seven is even.
 	\item $x$ is in $D$, and $f(x) \geq 5$.
@@ -82,7 +82,7 @@ F&F&F&F&T\\
 \end{enumerate}
 \subsection{Write the negation of each statement.}
 \begin{enumerate}[(a)]
-	\item $f(x)$ is discontinuous at $x=3$.
+	\item $f(x)$ is not continuous at $x=3$.
 	\item $R$ is not reflexive and not symmetric.
 	\item $4$ and $9$ are not relatively prime.
 	\item $x \notin A \lor x \in B$.
@@ -245,8 +245,34 @@ symbols.}
 \begin{enumerate}[(a)]
 	\item $n \land \neg m$.
 	\item $\neg (m \lor n)$.
-	\item $
+	\item $n \implies m$
+	\item $m \implies \neg n$
+	\item $ \neg (m \land n) \iff \neg m \lor \neg n$
+\end{enumerate}
 
+\subsection{Define ``nor'' ($\nabla$) as:}
+
+\begin{enumerate}[(a)]
+	\item \begin{tabular}{*{1}{c}|*{3}{c}}$p$&$\neg p$&$\iff$&$p \nabla p$\\
+			\hline	
+			T&F&T&F\\
+			F&T&T&T\\
+			\end{tabular}	
+	\item \begin{tabular}{*{2}{c}|*{3}{c}}$p$&$q$&$(p \nabla p)$&$\iff$&$(q \nabla q)$\\
+			\hline
+			T&T&F&T&F\\
+			T&F&F&F&T\\
+			F&T&T&F&F\\
+			F&F&T&F&T\\
+		  \end{tabular}
+		  
+	\item \begin{tabular}{*{2}{c}|*{1}{c}}$p$&$q$&$p \land q$\\
+			\hline
+			T&T&T\\
+			T&F&F\\
+			F&T&F\\
+			F&F&F\\
+		  \end{tabular}
 \end{enumerate}
 
 \section{Section 2}

@@ -1,3 +1,13 @@
+def delta(p,q):
+    if p and q:
+        return False
+    elif p and not q:
+        return False
+    elif not p and q:
+        return False
+    elif not p and not q:
+        return True
+
 def generate_cases(size:int):
     '''
     input: int number of variables (p, q, r, etc.)
@@ -73,6 +83,16 @@ if __name__ == "__main__":
     # print(truth_table(['p', 'q'], [(r'p \lor \neg q', lambda p, q: p or not q)]))
     # print(truth_table(['p'], [(r'p \land \neg p', lambda p: p and not p)]))
 
-    print(truth_table(['p','q'], [(r'[(\neg q) \land (p \implies q)]', lambda p, q: (not q) and ((p and q) or not p)),
-                                   (r'\implies', lambda p, q: (not q) and ((p and q) or not p) and not p or not((not q) and ((p and q) or not p))),
-                                   (r'\neg p', lambda p, q: not p)]))
+    # print(truth_table(['p','q'], [(r'[(\neg q) \land (p \implies q)]', lambda p, q: (not q) and ((p and q) or not p)),
+    #                               (r'\implies', lambda p, q: (not q) and ((p and q) or not p) and not p or not((not q) and ((p and q) or not p))),
+    #                               (r'\neg p', lambda p, q: not p)]))
+
+    # print(truth_table(['p'], [(r'\neg p', lambda p: not p),
+    #                              (r'\iff', lambda p: (not p) and delta(p,p)),
+    #                              (r'p \delta p', lambda p: delta(p,p))]))
+
+    # print(truth_table(['p','q'], [(r'p \nabla p', lambda p,q: delta(p,p)),
+    #                               (r'\iff', lambda p,q: delta(p,p) and delta(q,q) or not delta(p,p) and not delta(q,q)),
+    #                               (r'q \nabla q', lambda p,q: delta(q,q))]))
+
+    print(truth_table(['p','q'], [(r'p \land q', lambda p,q: p and q)]))
