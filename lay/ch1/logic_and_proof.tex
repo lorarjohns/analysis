@@ -442,4 +442,74 @@ Justify your answer.}
 	\item $\exists \epsilon > 0 \ni \forall \delta > 0, \exists x, y \in S \ni (\lvert x - y \rvert < \delta) \land (\lvert f(x) - f(y) \rvert \geq \epsilon.$
 \end{enumerate}
 
+\section{Section 3}
+\nsubsection{2}{Mark each statement True or False. Justify each answer.}
+\begin{enumerate}[(a)]
+	\item \emph{True}. In this context the antecedent is called the conclusion.
+	\item \emph{False}. A statement that is always false is called a contradiction.
+	\item \emph{True}. The converse of $p \implies q$ is $q \implies p$.
+	\item \emph{True}. A universal statement can be proved false using a single example.
+	\item \emph{False}. To prove an existential statement is false, we must show $\forall n, \neg p(n)$.
+\end{enumerate}
+
+\nsubsection{4}{Write the converse of each implication in exercise 1.3.3.}
+\begin{enumerate}[(a)]
+	\item If some violets are blue, then all roses are red.
+	\item If $A$ is not invertible, then there exists a nontrivial solution to $A\mathbf{x} = 0$.
+	\item If $f(C)$ is not connected, then $f$ is not continuous or $C$ is not connected.
+\end{enumerate}
+
+\nsubsection{5}{Write the inverse of each implication in exercise 1.3.3.}
+\begin{enumerate}[(a)]
+	\item If some roses are not red, then all violets are not blue.
+	\item If there exists no nontrivial solution to $A\mathbf{x} = 0$, then $A$ is invertible.
+	\item If $f$ is not continuous or $C$ is not connected, then $f(C)$ is not connected.
+\end{enumerate}
+
+\nsubsection{6}{Provide a counterexample for each statement.}
+\begin{enumerate}[(a)]
+	\item Let $x = -4$.
+	\item Let $n = -2$.
+	\item Let $x = \frac{1}{3}$.
+	\item An equilateral triangle has all three angles equal to $\frac{\pi}{3}$ rad.
+	\item Let $n = 41$.
+	\item $2$ is prime and not odd.
+	\item Let $x = 101$.
+	\item Let $n = 5$.
+	\item Let $n = 5$.
+	\item Let $x = 12$ and $y = 3$.
+	\item Let $x = 0$.
+	\item Let $x = 1$.
+	\item Let $x = 0$.
+	\item Let $x = -1$.
+\end{enumerate}
+
+\nsubsection{10}{Using tautologies from Example 3.12, establish the
+desired conclusion from the list of hypotheses.}
+\begin{enumerate}[(a)]
+	\item \begin{align}
+	\neg r & & & & \quad \text{Hypothesis}\tag{1}\\
+	\neg r &\implies (s \implies r) & & & \text{Hypothesis and 3.12(n)}\tag{2}\\
+	s &\implies r & & & \text{Lines 1,2 and 3.12(h)}\tag{3} \\
+	\neg r &\implies \neg s & & & \text{Contrapositive of Line 3, 3.12(c)}\tag{4} \\
+	\neg s & & & & \text{Lines 1,4 and 3.12(h)}\tag{5}\\ 
+	\end{align}
+
+	\item \begin{align}
+	\neg t & & & & \text{Hypothesis}\tag{1} \\
+	(r \implies t) &\land (s \implies t) & & & \text{Hypothesis and 3.12(q)}\tag{2}\\
+	(r \implies t) &\land (\neg t \implies \neg s) & & & \text{Line 2 and 3.12(c)}\tag{3}\\
+	t &\lor \neg s & & & \text{Lines 1, 3 and 3.12(o)}\tag{4} \\
+	\neg s & & & & \text{Line 4 and 3.12(j)}\tag{5} \\ 
+	\end{align}
+	
+	\item \begin{align}
+	s &\lor t & & & \text{Hypothesis}\tag{1} \\
+	s &\implies \neg r & & & \text{Hypothesis and 3.12(c)}\tag{2}\\
+	t &\implies u & & & \text{Hypothesis}\tag{3}\\
+	\neg r &\lor u & & & \text{Lines 1-3 and 3.12(o)}\tag{4} \\
+	\end{align}
+\end{enumerate}
+
+
 \end{document}
