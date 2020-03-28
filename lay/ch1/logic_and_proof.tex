@@ -356,8 +356,90 @@ F&F&T&F&T&F\\
 F&F&F&F&T&F\\
 \end{tabular}
 \end{enumerate}
+
 \section{Section 2}
 
-\subsection{*}
+\nsubsection{2}{Mark each statement true or false. Justify your answer.}
+\begin{enumerate}[(a)]
+	\item \emph{False}. $\exists$ denotes the existence at least one. $\forall$ is the universal quantifier and means ``for each, for every''.
+	\item \emph{True}. Universal quantification is assumed if a variable is used in the antecedent of an implication without an explicit quantifier.
+	\item \emph{True}. For instance, $\forall x \exists y$ corresponds to the statement ``For every disease, there exists a cure'', while $\exists x \forall y$ corresponds to the statement ``There is a panacea for all diseases.''	
+\end{enumerate}
+
+\nsubsection{4}{Write the negation of each statement.}
+\begin{enumerate}[(a)]
+	\item Someone does not like Robert.
+	\item No students work part-time.
+	\item Some square matrix is triangular.
+	\item $\forall x \in B, f(x) \leq k$.
+	\item $\exists x \ni (x > 5) \land [(f(x) \geq 3) \land (f(x) \leq 7)]$.
+	\item $\exists x \in A \ni \forall y \in B, f(x) \geq f(y)$.
+\end{enumerate}
+
+\nsubsection{6}{Determine the truth value of each statement, assuming $x$ is a real number.
+Justify your answer.}
+\begin{enumerate}[(a)]
+	\item \emph{True}. Let $x = 4$. $3 < 4$ and $4 < 5$, so $4$ is included in the interval.
+	\item \emph{False}. Let $x = 3$ Then $3 \in [3, 5]$ and $3 < 4$.
+	\item \emph{True}. Let $x = 3$. Then $3^2 = 9 \neq 3$.
+	\item \emph{False}. Let $x = \sqrt{3}$. Then $x$ is a real number and $(\sqrt{3})^2 = 3$.
+	\item \emph{False}.
+	Let $x = 0$. Then $0^2 = 0$. \\
+	Let $x > 0$. Then for all $x$, $x^2$ is positive. \\
+	Let $x < 0$. Then for all $x$, $x^2$ is also positive. \\
+	Therefore, for all real $x$, $x \neq -5$.
+	\item \emph{False}. Let $ x = -5$. Then $(-5)^2 = 25 \neq -5$.
+	\item \emph{True}. Let $x = x$. $x - x = 0 \iff x = x$. (This is the additive identity of a field.)
+	\item \emph{True}. By the same token, it is always true that for all $x$, $x - x = 0$.
+\end{enumerate}
+
+\nsubsection{8}{Which of the following best identifies f as a constant function, where x and y are real numbers?}
+\begin{itemize}
+	\item[] $\exists y \ni \forall x, f(x) = y$ represents a constant function.
+\end{itemize}
+
+\nsubsection{10}{Determine the truth value of each statement, assuming that x and y are realnumbers. Justify your answer.}
+\begin{enumerate}[(a)]
+	\item \emph{True}. For all $x \in \mathbb{R}$, let $y = 0$. Then $xy = 0$.
+	\item \emph{False}. Let $x = 0$. Then for all $y$, $xy = 0 \neq 1$.
+	\item \emph{False}. For all $y \in \mathbb{R}$, there is a real number $x = 0$ such that $xy = 0(y) = 0 \neq 1$.
+	\item \emph{True}. Let $y = 1$. Then for all $x \in \mathbb{R}$, $xy = x(1) = x$.
+\end{enumerate}
+
+\nsubsection{12}{Determine the truth value of each statement, assuming that x, y, and z are real numbers. Justify your answer.}
+\begin{enumerate}[(a)]
+	\item \emph{True}. Suppose by contradiction that for all $x, y, z \in \mathbb{Z}$, there exist some $x$ and $y$ such that $x + y \neq z$. \\Then some integer would have no successor, which violates the properties of $\mathbb Z$. \\So there must be some $x$ and $y$ such that $x + y = z$.
+	\item \emph{False}. Let $x = 0$.\\ Then, for any $y$, let $z = y + 0$, or $z = y$.\\
+	Let $z = 1$. Since $y \neq 1$ for all $y \in \mathbb{R}$, the statement is false.
+	\item \emph{True}. Let $x$ be any real number other than zero. Then, given any $y$, let $z = \frac{y}{x}$.
+	\item \emph{False}. Let $x = 2$. Then $z \leq 2 + y$.\\
+	Then for all $y$, we must show there exists a $z$ such that $y < z \leq x + y$, or $0 < z - y \leq x$.\\
+	Assuming $x = 2$, we must show there is some $z$ such that $y < z \leq 2 + y$. \\Let $z = y + 1$. Then $y < y + 1 < y + 2$. Therefore, the statement is false, because $z < x + y$.
+	\item \emph{False}. Assume by contradiction that $y < z \leq x + y$, or $0 < z - y \leq x$.\\
+	Let $x = 2$. Then for all $z$, $y < z \leq y + 2$.\\
+	Let $y = z - 1$, such that $z - 1 < z \leq z + 1$.\\
+	Then $z > z - 1$ and $z \leq 2 + (z - 1) = z + 1$ for all $z$.\\
+	Since the negation is true, the statement is false.
+\end{enumerate}
+\nsubsection{14}{Rewrite the defining conditions in logical symbolism, and write the negation.}
+\begin{enumerate}[(a)]
+	\item $\exists k > 0 \ni \forall x, f(x + k) = f(x) \implies \text{f is periodic}$.
+	\item $\neg(\text{f is periodic}) \implies \forall x > 0, \exists x \ni f(x + k) \neq f(x)$.
+\end{enumerate}
+\nsubsection{16}{Rewrite the defining conditions in logical symbolism, and write the negation.}
+\begin{enumerate}[(a)]
+	\item $[\forall x, y, x < y \implies f(x) > f(y)] \implies f \text{is strictly decreasing}$.
+	\item $\neg(f \text{is strictly decreasing}) \implies \exists x, y \ni (x < y) \land f(x) \leq f(y)$.
+\end{enumerate}
+\nsubsection{18}{Rewrite the defining conditions in logical symbolism, and write the negation.}
+\begin{enumerate}[(a)]
+	\item $[\forall y \in B \exists x \in A \ni f(x) = y] \implies f \text{is surjective}.$
+	\item $\neg(f \text{is surjective}) \implies \exists y \in B \ni \forall x \in A, f(x) \neq y$.
+\end{enumerate}
+\nsubsection{20}{Rewrite the defining conditions in logical symbolism, and write the negation.}
+\begin{enumerate}[(a)]
+	\item $\forall \epsilon > 0 \exists \delta > 0 \ni \forall x, y \in S, \lvert x - y \rvert < \delta \implies \lvert f(x) - f(y) \rvert < \epsilon$.
+	\item $\exists \epsilon > 0 \ni \forall \delta > 0, \exists x, y \in S \ni (\lvert x - y \rvert < \delta) \land (\lvert f(x) - f(y) \rvert \geq \epsilon.$
+\end{enumerate}
 
 \end{document}
