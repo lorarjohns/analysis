@@ -18,6 +18,8 @@
 
 \date{\normalsize\today} % Today's date (\today) or a custom date
 
+\newtheorem*{theorem}{Theorem}
+
 \begin{document}
 
 \maketitle % Print the title
@@ -531,7 +533,38 @@ desired conclusion from the list of hypotheses.}
 \end{enumerate}
 
 \nsubsection{20}{Suppose $x$ and $y$ are real numbers. Prove or give a counterexample.}
-\begin{enumerate}
-	\item 
+\begin{enumerate}[(a)]
+\item \begin{theorem}
+	If $x$ is irrational and $y$ is irrational, then $x + y$ is irrational.
+	\end{theorem}
+	
+    	\begin{proof}
+	If $x + y$ is irrational, then it can't be expressed as a fraction $\frac{a}{b}$ in lowest terms, where $a$ and $b$ are integers.\\
+	Let $x = \sqrt{5}$ and $y = - \sqrt{5}$. Then $x + y = 0$ But $0$ can be expressed as a fraction $\frac{0}{n}$, where $n \in \{\mathbb{Z} \neq 0\}$. So $0$ is rational, and therefore $x + y$ is rational. So the theorem is false.
+	\end{proof}
+	
+\item \begin{theorem}
+If $x + y$ is irrational, then $x$ is irrational or $y$ is irrational.
+\end{theorem}
+\begin{proof}
+We prove the contrapositive. If $x$ is rational and $y$ is rational, then $x + y$ is rational.\\
+Let $x = \frac{a}{b}$ and $y = \frac{m}{n}$ for some $a, b, m, n \in \{\mathbb{Z} \neq\}$. Then \begin{align}
+x + y &= \frac{a}{b} + \frac{m}{n} \\
+&= \frac{an}{nb} + \frac{mb}{nb} \\
+&= \frac{an + mb}{nb}
+\end{align}
+Thus, $x+y$ can be expressed as a ratio of integers and is rational as required.
+\end{proof}
+\item \begin{theorem}
+If $x$ is irrational and $y$ is irrational, then $xy$ is irrational.
+\end{theorem}
+\begin{proof}
+Let $x=\sqrt{2}$ and $y=\frac{1}{\sqrt{2}}$. Then \begin{align}
+xy &= \sqrt{2} * \frac{1}{\sqrt{2}}\\
+&= \frac{\sqrt{2}}{\sqrt{2}}\\
+&= 1
+\end{align}
+Since $1$ is rational, the stated theorem is false.
+\end{proof}
 \end{enumerate}
 \end{document}
