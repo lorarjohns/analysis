@@ -1,0 +1,131 @@
+\documentclass[12pt]{scrartcl} % Font size
+
+\input{structure.tex} 
+
+\title{	
+	\normalfont\normalsize
+	\textsc{Analysis with an Introduction to Proof}\\ % Your university, school and/or department name(s)
+	\vspace{25pt} % Whitespace
+	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
+	\vspace{20pt} % Whitespace
+	{\huge Sets and Functions, Chapter Exercises}\\ % The assignment title
+	\vspace{12pt} % Whitespace
+	\rule{\linewidth}{2pt}\\ % Thick bottom horizontal rule
+	\vspace{12pt} % Whitespace
+}
+
+\author{\LARGE L. J.} % Your name
+
+\date{\normalsize\today} % Today's date (\today) or a custom date
+
+\newtheorem*{theorem}{Theorem}
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section{Section 1}
+
+\nsubsection{2}{Mark each statement True or False. Justify each answer.}
+\begin{enumerate}[(a)]
+	\item \emph{False}. Let $A = \{x \in \mathbb{R}: x \text{ is prime}\}$ and let $B = \{x \in \mathbb{R}: x \text{ is divisible by 6} \}$. Then $A \cap B = \emptyset$, but $A \neq \emptyset$ and $B \neq \emptyset$.
+	\item \emph{True}. Let $A = \{1, 3, 5\}$ and let $B = \{2, 4, 6\}$. Then $A \cup B = \{1, 2, 3, 4, 5, 6\}$. If $x \in A \cup B$, then $x$ is equal to one of those values. If $x = 4$, then it is also true that $x \in B$. By the same logic more generally, if $x \in A \cup B$, then $x \in A$ or $x \in B$.
+	\item \emph{False}. If $x \in A\setminus B$, then $x \in A$ \emph{and} $x \notin B$. Let $C = \{x: (x \in A) \land (x \in B)\}$. If $x \in C$, then if $x \in A\setminus B \stackrel{?}{\implies} (x \in A) \lor (x \notin B)$, it is also true $x \in A\setminus B$. But this is at odds with the definition of the relative complement of $B$ with respect to $A$.
+	\item \emph{False}. It's fine to begin this way; the only nontrivial proof is one in which $S$ is nonempty.
+\end{enumerate}
+
+\nsubsection{4}{Let $A = \{2,4,6,8\}$, $B =\{6,8,10\}$, and $C = \{5,6,7,8\}$. Find the following sets.}
+\begin{enumerate}[(a)]
+	\item $\{6,8\}$
+	\item $\{2,4,6,8,10\}$
+	\item $\{2,4\}$
+	\item $\{6,8\}$
+	\item $\{10\}$
+	\item $\{5,7,10\}$
+	\item $\emptyset$
+	\item $\{5,7\}$
+\end{enumerate}
+
+\nsubsection{6}{Let A and B be subsets of a universal set U. Simplify each of the following expressions.}
+\begin{enumerate}[(a)]
+	\item $U$
+	\item $\emptyset$
+	\item $A \cap B$
+	\item $A \cup B$
+	\item $A$
+	\item $A$
+\end{enumerate}
+
+\nsubsection{8}{Let $S = \{\emptyset, \{\emptyset\}\}$. Determine whether each of the following is True or False. Explain your answers.}
+\begin{enumerate}[(a)]
+	\item \emph{True}. $\forall x \in \emptyset$, $x \in S$. Therefore, $\emptyset \subseteq S$.
+	\item \emph{True}. $S$ is strictly enumerated, and $\emptyset$ is one of its elements.
+	\item \emph{True}. $\{\emptyset\} \subseteq S$ because for all $x \in \{\emptyset\}$, $x \in S$. Unlike in (a), though, the proof is not vacuous; $\emptyset$ is an element of both sets.
+	\item \emph{True}. $\{\emptyset\}$ is an element in $S$, as defined by enumeration. (To contrast (c) and (d), $\{\{\emptyset\}\}$ would also be a valid subset of $S$.)
+\end{enumerate}
+\nsubsection{10}{Fill in the blanks in the proof of the following theorem.}
+\begin{theorem}
+$A \subseteq B$ iff $A \cup B = B$.
+\end{theorem}
+\begin{proof}
+Suppose that $A \subseteq B = B$. If $x \in A \cup B$, then $x \in A$ or $x \in B$.
+Since $A \subseteq B$, in either case, we have $x \in B$. Thus $A \subseteq B$.
+On the other hand, if $x \in B$, then $x \in A \cup B$, so $A \subseteq B$. Hence $A \cup B \ B$. \\
+Conversely, suppose that $A \cup B = B$. If $x \in A$, then $x \in A \cup B$. But $A \cup B = B$, so $x \in B$. Thus $A \subseteq B$.
+\end{proof}
+\nsubsection{14}{Which statements below would enable one to conclude that $x \in A \cup B$?}
+\begin{enumerate}[(a)]
+	\item If $x \in A$ and $x \in B$, then $x \in A \cup B$.
+	\item If $x \in A$ or $x \in B$, then $x \in A \cup B$.
+	\item This statement tells us $A \subseteq B$, but does not let us conclude anything about $x$.
+	\item If $x \notin A$, then $x \in B$ implies that if $x \notin B$, then $x \in A$. Since $x$ must always be either in $A$ or $B$, we can conclude that $x \in A \cup B$.
+\end{enumerate}
+
+\nsubsection{16}{Which statements below would enable one to conclude that $x \in A\setminus B$?}
+\begin{enumerate}[(a)]
+	\item If $x \in A$ and $x \notin B\setminus A$, then $x$ could be in $A \cap B$, so we cannot conclude that $x \in A \setminus B$.
+	\item If $x \in A \cup B$ and $x \notin B$, then $(A \cup B) \cap U\setminus B$. Equivalently, $A \cap U\setminus B \cup B \cap U\setminus B$, and $A\setminus B \cup \emptyset$, or $A\setminus B$. Therefore we can conclude that $x \in A\setminus B$.
+	\item If $x \in A \cup B$ and $x \notin A \cap B$, then $x \in A$ or $x \in B$. If $x \in A$, then $x \in A\setminus B$. But if $x \in B$, then $x \notin A\setminus B$. So we cannot conclude that $x \in A\setminus B$.
+	\item If $x \in A$ and $x \notin A \cap B$, then $x \notin B$. Thus $x \in A\setminus B$
+\end{enumerate}
+
+\nsubsection{18}{Prove that the empty set is unique. That is, suppose that $A$ and $B$ are empty and prove that $A = B$.}
+\begin{proof}
+Suppose that $A$ and $B$ are empty sets. If $A = B$, then $A \subseteq B$ and $B \subseteq A$. \\
+If $A \subseteq B$, then if $x \in A$, $x \in B$. By the definition of an empty set, for all $x$, $x \notin \emptyset$. Therefore, for all $x$, $x \notin A$ and $x \notin B$. By logical implication, then, if $x \in A$, $x \in B$. This implies that $A \subseteq B$. \\
+On the other hand. if $x \in B$, then $x \in A$. By the same argument, we conclude $B \subseteq A$. So, we have $A \subseteq B$ and $B \subseteq A$. Thus $A = B$.
+\end{proof}
+
+\nsubsection{20}{Prove: $A \cap B$ and $A\setminus B$ are disjoint and $A = (A \cap B) \cup (A \setminus B)$.}
+\begin{proof}
+Assume the conclusion that $(A \cap B) \cap (A\setminus B) = \emptyset$. \\
+If $x \in (A \cap B)$, then $x \in A$ and $x \in B$. But then $x \notin (A \setminus B)$, because if $x \in A \setminus B$, then $x \in A$ and $x \notin B$. In other words, if $x \in (A \cap B)$, $x \in (A \setminus (A \setminus B))$. So $(A \cap B) \nsubseteq (A \setminus B)$. \\
+Conversely, if $x \in (A\setminus B)$, then $x \in A$ and $x \in B$. But then $x \notin (A \cap B)$. So $(A\setminus B) \nsubseteq (A \cap B)$. Thus, $(A \cap B) \cap (A\setminus B) = \emptyset$. Therefore $(A \cap B)$ and  $(A\setminus B)$ are disjoint. \\
+In other words:
+\begin{align}
+(A \cap B) \cap (A\setminus B) \\
+= (A \cap B) \cap (A \cap U\setminus B) \\
+= (U\setminus A \cup U\setminus B) \cup (U\setminus A \cup B) \\
+= (U\setminus A) \cup (U\setminus B \cup B) \\
+= A \cap (B \cap U\setminus B) \\
+= A \cap \emptyset \\
+= \emptyset
+\end{align}
+\end{proof}
+\begin{proof}
+To prove  $A = (A \cap B) \cup (A \setminus B)$, first show that if $x \in (A \cap B) \cup (A\setminus B)$, then $x \in A$. \\
+If $x \in (A \cap B) \cup (A\setminus B)$, then $x \in (A \cup A\setminus B)$ and $x \in (B \cup A\setminus B)$. Suppose $x \in (A \cap B) \cup (A\setminus B)$.
+If $x \in A$, then $x \in (A \cup A\setminus B)$ and $x \in (B \cup A\setminus B)$, so $x \in (A \cap B) \cup (A\setminus B)$. \\If $x \in B$, then $x \in (B \cup A\setminus B)$ (equivalently, $(A \cup B)$), but $x \notin (A \cup A\setminus B)$ (equivalently, $A$). So by necessity, we have $x \in A$, and $(A \cap B) \cup (A\setminus B) = A$. \\
+
+On the other hand, suppose $x \in A$. Then $x \in (A \cap B)$ or $x \in (A\setminus B)$:
+\begin{align}
+A\\
+= A \cap U \\
+= A \cap (B \cup U\setminus B) \\
+= (A \cap B) \cup (A \cap U\setminus B) \\
+= (A \cap B) \cup (A\setminus B)
+\end{align}
+\\Either way, $x \in (A \cap B) \cup (A \setminus B)$. So we have $A = (A \cap B) \cup (A \setminus B)$.
+
+\end{proof}
+\end{document}

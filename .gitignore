@@ -5,3 +5,7 @@
 book/
 lay/Lay-Analysis homework.doc
 lay/*.lock*
+*.dvi
+*.fls
+*.fdb_latexmk
+*.~*
