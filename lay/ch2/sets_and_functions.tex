@@ -297,4 +297,80 @@ We see that $a$ is in a partition alone, but $b, c$ and $d$ are in a relation wi
 &(d,c), (d,b) \}.
 \end{align*}
 
+\section{Section 3}
+
+%2.3 #2, 4, 6, 8, 10, 14, 16, 20 (8 problems)
+%2.4 #2, 4, 6, 12, 16, 18, 20, 22 (8 problems)
+
+\nsubsection{2}{Mark each statement True or False. Justify your answer.}
+\begin{enumerate}[(a)]
+\item \emph{True}. By the existence requirement of the definition of a function, for all $a$ in $A$, there must exist some $b$ in $B$ such that $f(a) = b$. Since $C \subset A$, it follows that every $c$ in $C$ is also in $A$, and so for all $c$ in $C$, there must be some $b$ in $B$ such that $f(c) = b$. Thus $f(C)$ is a nonempty subset of $B$.
+\item \emph{False}. If $f$ is surjective, it is a mapping form all elements in the domain $A$ to all elements in $B$, that is to say the range of $f$ is equal to its codomain. But though $f^{-1}(y)$ is guaranteed to exist for $y \in B$, it is not guaranteed to be one-to-one unless $f$ is also injective. Therefore $f^{-1}(y)$ is a subset ($\subset$) of $A$, rather than an element in ($\in$) $A$.
+\item \emph{False}. If $B$ is the codomain of $f$, and $D$ is a subset of $B$, then unless $f$ is surjective, there is no guarantee that $D$ intersects the image of $A$ in $B$.
+\item \emph{True}. Let $f: \, A \rightarrow B$ and $g: \, B \rightarrow C$ be surjective functions. Since $g$ is surjective, the range of $g$ is equal to $C$, and for all $b \in B$, there exists $c \in C$. Since $f$ is surjective, the range of $f$ is equal to $B$, and for all $a \in A$, there exists $b \in B$. So $g \circ f(a)= g(f(a)) = g(b) =c$. Therefore $g \circ f$ is surjective.
+\item \emph{True}. If $f$ is bijective, then its domain is $A$ and its range and codomain are $B$. Since $f$ is a function, each $x$ in $f$ corresponds to only one $y$ in $B$. Therefore, if $(x,y) \in f$, it must follow that the inverse of $f$ is bijective as well, and $(y,x) \in f^{-1}$.
+\item \emph{False}. The identity function maps $\mathbb{R}$ onto $\mathbb{R}$ such that for all $x \in \mathbb{R}$, $(i)x = x$.
+\end{enumerate}
+
+\nsubsection{4}{Find all possible functions $f: \, A \rightarrow B$ in each case below. Describe the functions by listing their ordered pairs.}
+\begin{enumerate}[(a)]
+\item $ f = \set{(1,5), (2,5), (3,5)}$.
+\item $ f_1 = \set{(4,5)}, f_2 = \set{(4,6)}$.
+\item $ f_1 = \set{(1,5), (2,6)}, f_2 = \set{(1,5), (2,5)}, f_3=\set{(2,5),(1,6)}, f_4=\set{(2,5),(1,6)}$
+\end{enumerate}
+
+\nsubsection{6}{Let $A \subset \mathbb{R}$ and define $f: \, A \rightarrow B$ as given below. In each case describe an $A$ that is as large as possible while making $f$ injective.}
+\begin{enumerate}[(a)]
+\item $A = [5, \infty)$ or $A = (-\infty, 5]$.
+\item $A = [-0.5, \infty)$ or $A = (-\infty, -0.5]$.
+\item $A = [-\frac{\pi}{2}, \frac{\pi}{2}]$ or $A = [\frac{\pi}{2}, \frac{3\pi}{2}]$ (for example).
+\end{enumerate}
+
+\nsubsection{8}{Circles in the plane}
+\begin{enumerate}[(a)]
+\item Let $S$ be the set of all circles in the plane. Define $f: \, S \rightarrow [0, \infty)$ by $f(C)$ = the area of $C$ for all $C \in S$. \\
+Assuming a circle can have a radius $r=0$, a function that maps all circles to the value of their area is surjective but not injective, because two circles at different coordinate positions can nonetheless have equal area.
+\item Let $T$ be the set of all circles in the plane that are centered at the origin. Define $g: \, T \rightarrow [0, \infty)$ by $g(C) =$ the area of $C$ for all $C \in T$. \\
+Now, $g$ is both injective and surjective; for every circle defined by radius length $r$ in the interval  $[0, \infty)$ there is an area $g(C)$ in $[0, \infty)$, and since all circles are centered at the origin, any circle with the same area has the same radius length and is the same circle.
+\end{enumerate}
+
+\nsubsection{10}{In each part, find a function $\mathbb{N}\rightarrow\mathbb{N}$ that has the desired properties.}
+\begin{enumerate}[(a)]
+\item Surjective, but not injective:
+\begin{equation}
+f(x) = 
+\begin{cases}
+x - 1, & \text{ for } x > 1, \\
+1 & \text{ for } x = 1.
+
+\end{cases}
+\end{equation}
+
+\item Injective, but not surjective:
+\begin{equation}
+f(x) = 2x.
+\end{equation}
+\item Neither surjective nor injective:
+\begin{equation}
+f(x) = 1
+\end{equation}
+\item Bijective:
+\begin{equation}
+f(x) = x.
+\end{equation}
+\end{enumerate}
+\nsubsection{14}{Define $f: \, \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x^2$, Find $f^{-1}(T)$ for each of the following.}
+\begin{enumerate}([a])
+\item $\set{-3, 3}$
+\item $(-3, -2] \cup [2, 3)$
+\item $[-3, 3]$
+\end{enumerate}
+
+\nsubsection{16}{Define $f: \, \mathbb{R}\rightarrow\mathbb{R}$ by $f(x) = x^2$. Find examples to show that equality does not hold in parts (a), (b), and (c) of Theorem 2.3.16.}
+\begin{enumerate}[(a)]
+\item Show that $C \neq f^{-1}[f(C)]$. \\
+Let $C_1$  and $C_2$ be nonempty subsets of $R$  
+
+\end{enumerate}
+%\nsubsection{20}
 \end{document}
