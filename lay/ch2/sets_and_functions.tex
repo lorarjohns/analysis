@@ -300,7 +300,6 @@ We see that $a$ is in a partition alone, but $b, c$ and $d$ are in a relation wi
 \section{Section 3}
 
 %2.3 #2, 4, 6, 8, 10, 14, 16, 20 (8 problems)
-%2.4 #2, 4, 6, 12, 16, 18, 20, 22 (8 problems)
 
 \nsubsection{2}{Mark each statement True or False. Justify your answer.}
 \begin{enumerate}[(a)]
@@ -360,17 +359,60 @@ f(x) = x.
 \end{equation}
 \end{enumerate}
 \nsubsection{14}{Define $f: \, \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = x^2$, Find $f^{-1}(T)$ for each of the following.}
-\begin{enumerate}([a])
+\begin{enumerate}[(a)]
 \item $\set{-3, 3}$
 \item $(-3, -2] \cup [2, 3)$
 \item $[-3, 3]$
 \end{enumerate}
 
+
 \nsubsection{16}{Define $f: \, \mathbb{R}\rightarrow\mathbb{R}$ by $f(x) = x^2$. Find examples to show that equality does not hold in parts (a), (b), and (c) of Theorem 2.3.16.}
 \begin{enumerate}[(a)]
 \item Show that $C \neq f^{-1}[f(C)]$. \\
-Let $C_1$  and $C_2$ be nonempty subsets of $R$  
+Let $C$  and $C'$ be nonempty subsets of $R$ such that $C \cap C' = \emptyset$ and $f(C) = f(C')$. In that case, $f^{-1}[f(C)] = C \cup C'$, and $C \subset C \cup C'$, so $C \neq f^{-1}[f(C)]$.
 
 \end{enumerate}
-%\nsubsection{20}
+
+\nsubsection{20}{Suppose that $f: \, A\rightarrow B$ and suppose that $C \subset A$ and $D \subset B$.}
+\begin{enumerate}[(a)]
+\item Prove or give a counterexample: $f(C) \subset D \iff C \subset f^{-1}(D)$. \\
+Suppose $f(C) \subset D$ and suppose $x \in C$. Since $C \subset A$, $x \in A$. Since $x \in C$, $f(x) \in f(C)$ and therefore $f(x) \in D$, by supposition. \\
+So $x \in A$, and $f(x) \in D$, meaning that $x \in f^{-1}(D)$, where $f^{-1}(D) = \{x \in C: f(x) \in D\}$. \\
+
+From the other side, suppose $C \subset f^{-1}(D)$. Let $x \in C$. Then $x \in f^{-1}(D)$, and by the definition of inverse image, $f(x) \in D$.
+\item What condition on $f$ will ensure that $f(C) = D \iff C = f^{-1}(D)$? \\
+$f$ must be bijective.
+
+\end{enumerate}
+\section{Section 4}
+
+%2.4 #2, 4, 6, 12, 16, 18, 20, 22 (8 problems)
+\nsubsection{2}{Mark each statement True or False.}
+\begin{enumerate}[(a)]
+\item \emph{True}. This is the definition of ``equinumerous''.
+\item \emph{False}. The empty set is also a finite set.
+\item \emph{False}. A cardinal number that is not finite is transfinite.
+\item \emph{False}. A set $S$ is denumerable if there exists a bijection $f: \, \mathbb{N}\rightarrow S$.
+\item \emph{True}. See theorem 2.4.9.
+\item \emph{False}. A set is denumerable iff it is equinumerous with $\mathbb{N}$. A subset of a denumerable set can be finite.
+\end{enumerate}
+
+\nsubsection{4}{Suppose that $m < n$. Prove that the intervals $(0,1)$ and $(m,n)$ are equinumerous by finding a specific bijection between them.}
+Let $f(x)=(n-m)x + m$.
+
+\nsubsection{6}{Prove: Every subset of a finite set is finite.}
+Let $S$ be a finite set. If $S = \emptyset$, then its only subset is $\emptyset$, which is finite, and we are done. \\
+Thus assume $S \neq \emptyset$, and there exists a bijection $f: \, I_n \rightarrow S$ for some $n \in \mathbb{N}$. If $T \subset S$ (and $T \neq \emptyset$) then let the elements of $I_n = \set{i_1, i_2, i_3, \ldots, n}$  in $T$ be represented by $i_1, i_2, i_3, \ldots, i_m$. \\
+Define the function $g: \, T \rightarrow I_m$ by $(t, j) \in g$ where $(t, i_j) \in f$. Then $g$ is bijective, so $T$ is finite.
+
+%\nsubsection{12}{Prove: Every infinite set is equinumerous with a proper subset of itself.}
+%Suppose $S$ is an infinite set and suppose $T$ is a denumerable subset of $S$. 
+
+%Define $f$ as an injection $f: \, T \rightarrow T$ such that $f(T) \neq T$.
+
+%Therefore, $T$ is equinumerous with $S$.
+%\nsubsection{16}{Determine whether each of the following is True or False.}
+%\nsubsection{18}{S}
+%\nsubsection{20}{}
+%\nsubsection{22}{}
 \end{document}
